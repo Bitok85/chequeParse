@@ -1,4 +1,4 @@
-package ru.chequeparse.service;
+package ru.chequeparse.bot.service;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.chequeparse.config.BotConfig;
+import ru.chequeparse.bot.config.BotConfig;
 
 @Component
 public class TelegramBot extends TelegramLongPollingBot {

@@ -1,4 +1,4 @@
-package ru.chequeparse.config;
+package ru.chequeparse.bot.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
