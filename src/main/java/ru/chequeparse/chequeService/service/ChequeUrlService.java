@@ -13,7 +13,7 @@ public class ChequeUrlService {
 
     private ChequeUrlRepository store;
 
-    public Optional<ChequeUrl> findChequeUrlByCUrl(String chequeUrl) {
-        return store.findChequeUrlByCUrl(chequeUrl);
+    public Optional<ChequeUrl> findByCUrl(String chequeUrl) {
+        return store.findBycUrl(chequeUrl);
     }
 }

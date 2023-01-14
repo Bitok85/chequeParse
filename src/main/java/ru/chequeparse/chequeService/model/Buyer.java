@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -13,7 +14,9 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Table
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-
+@NamedEntityGraph(name = "BuyerGraph", attributeNodes = {
+        @NamedAttributeNode("chequeUrls"), @NamedAttributeNode("products")
+})
 public class Buyer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +25,12 @@ public class Buyer {
 
     @Column(name = "tg_name")
     private String tgName;
-    private String status;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "buyer_id")
+    private Set<ChequeUrl> chequeUrls;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "buyer_id")
+    private Set<Product> products;
 
 }

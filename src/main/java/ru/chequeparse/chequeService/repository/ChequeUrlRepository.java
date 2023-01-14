@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface ChequeUrlRepository extends CrudRepository<ChequeUrl, Integer> {
 
-    Optional<ChequeUrl> findChequeUrlByCUrl(String cUrl);
+    Optional<ChequeUrl> findBycUrl(String cUrl);
 }
