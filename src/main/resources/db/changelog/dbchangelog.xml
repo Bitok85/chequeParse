@@ -10,5 +10,6 @@
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
     <include file="scripts/001_ddl_buyer_schema.sql" relativeToChangelogFile="true"/>
     <include file="scripts/002_ddl_cheque_urls_schema.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/003_ddl_product_schema.sql" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
