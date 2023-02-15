@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Map;
 
 
@@ -17,6 +18,6 @@ import java.util.Map;
 public class FinalData {
     @EqualsAndHashCode.Include
     private String user;
-    private Map<String, Map<LocalDate, Float>> products;
+    private Map<String, Map<LocalDateTime, Float>> products;
 
 }
